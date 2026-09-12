@@ -10,7 +10,8 @@ Use this skill when setting up Codex configuration on a new machine, repairing a
 ## Workflow
 
 - Locate or clone the `codex-config` repository from `https://github.com/MehdiKaffashiyan/codex-config.git`.
-- Prefer the configured local checkout when it is known; in this environment it is `D:\shakhsi\codex-config`.
+- Prefer a `codex-config` checkout inside the active Codex configuration directory.
+- If the configured checkout is missing on a machine, clone the canonical remote into the active Codex configuration directory before starting repository work.
 - Discover local paths from the active environment. Do not embed machine-specific paths in reusable files.
 - Verify the checkout before installing configuration:
   - `git status --short --branch`

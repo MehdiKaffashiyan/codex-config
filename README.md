@@ -10,7 +10,7 @@ This repository is the editable source of truth for:
 - personal on-demand skills under `skills/`
 - documentation for bootstrapping, synchronizing, and maintaining the configuration
 
-On this machine, use `D:\shakhsi\codex-config` as the configured local checkout for durable Codex behavior. Avoid treating a standalone global `AGENTS.md` file as the source of truth when this checkout is available.
+Use a `codex-config` checkout inside the active Codex configuration directory for durable Codex behavior. If it is missing on a machine, clone this repository there before starting repository work. Avoid treating a standalone global `AGENTS.md` file as the source of truth when this checkout is available.
 
 The canonical remote is:
 

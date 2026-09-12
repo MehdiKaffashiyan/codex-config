@@ -9,7 +9,8 @@ Project-level or nested `AGENTS.md` files may add more specific rules. Follow th
 ## Source Of Truth
 
 - Treat the `codex-config` repository as the editable source of truth for global Codex configuration and personal skills.
-- Use the configured local `codex-config` checkout as the working source for durable Codex behavior; in this environment that checkout is `D:\shakhsi\codex-config`.
+- Use a `codex-config` checkout inside the active Codex configuration directory as the working source for durable Codex behavior.
+- If that checkout is missing on a machine, clone `https://github.com/MehdiKaffashiyan/codex-config.git` into the active Codex configuration directory before starting repository work.
 - Do not maintain a standalone global `AGENTS.md` as the source of truth when a configured `codex-config` checkout is available; synchronize from the repository only after comparing the relevant files.
 - The canonical remote is `https://github.com/MehdiKaffashiyan/codex-config.git`.
 - Discover the local checkout from the active environment or current repository. Do not hard-code local user names, drive letters, home directories, machine names, ports, secrets, or private network values in reusable instructions.

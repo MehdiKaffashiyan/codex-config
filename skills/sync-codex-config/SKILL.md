@@ -11,7 +11,8 @@ Use this skill when the user asks to sync Codex configuration, install personal 
 
 - Treat the local `codex-config` checkout as the editable source of truth.
 - The canonical remote is `https://github.com/MehdiKaffashiyan/codex-config.git`.
-- Prefer the configured local checkout when it is known; in this environment it is `D:\shakhsi\codex-config`.
+- Prefer a `codex-config` checkout inside the active Codex configuration directory.
+- If the configured checkout is missing on a machine, clone the canonical remote into the active Codex configuration directory before synchronizing instructions or skills.
 - Do not depend on a standalone global `AGENTS.md` as the source of truth when the configured `codex-config` checkout is available.
 - Discover the active global Codex configuration directory from the environment or Codex runtime. If it cannot be discovered, ask for the location before writing outside the repository.
 
