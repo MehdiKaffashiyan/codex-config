@@ -11,6 +11,8 @@ Use this skill when the user asks to sync Codex configuration, install personal 
 
 - Treat the local `codex-config` checkout as the editable source of truth.
 - The canonical remote is `https://github.com/MehdiKaffashiyan/codex-config.git`.
+- Prefer the configured local checkout when it is known; in this environment it is `D:\shakhsi\codex-config`.
+- Do not depend on a standalone global `AGENTS.md` as the source of truth when the configured `codex-config` checkout is available.
 - Discover the active global Codex configuration directory from the environment or Codex runtime. If it cannot be discovered, ask for the location before writing outside the repository.
 
 ## Conflict-Safe Sync
@@ -22,7 +24,8 @@ Use this skill when the user asks to sync Codex configuration, install personal 
 3. Compare local branch, upstream branch, and working tree state before merging, rebasing, or copying files.
 4. Stop before writing if both source and destination changed in non-equivalent ways. Report both locations and the conflicting sections.
 5. Copy only clearly selected files:
-   - repository `AGENTS.md` to global `AGENTS.md`
+   - repository `AGENTS.md` to a target repository root `AGENTS.md` when bootstrapping or synchronizing project instructions
+   - repository `AGENTS.md` to global `AGENTS.md` only when the user explicitly wants a standalone global file
    - repository `skills/<name>/` to the installed personal skills directory
 6. Preserve destination-only files unless the user explicitly asks to remove them.
 7. After copying, normalize text files according to the active line-ending policy and verify the installed files exist.

@@ -10,6 +10,8 @@ This repository is the editable source of truth for:
 - personal on-demand skills under `skills/`
 - documentation for bootstrapping, synchronizing, and maintaining the configuration
 
+On this machine, use `D:\shakhsi\codex-config` as the configured local checkout for durable Codex behavior. Avoid treating a standalone global `AGENTS.md` file as the source of truth when this checkout is available.
+
 The canonical remote is:
 
 ```text
@@ -39,7 +41,7 @@ codex-config/
         `-- SKILL.md
 ```
 
-Keep `AGENTS.md` short. Move specialized, lengthy, or occasional workflows into skills so Codex only loads them when they are relevant.
+Keep `AGENTS.md` short. Move specialized, lengthy, evolving, or occasional workflows into focused skills so Codex only loads them when they are relevant.
 
 ## Setup On A New Machine
 

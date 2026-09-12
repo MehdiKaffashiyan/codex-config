@@ -9,9 +9,11 @@ Project-level or nested `AGENTS.md` files may add more specific rules. Follow th
 ## Source Of Truth
 
 - Treat the `codex-config` repository as the editable source of truth for global Codex configuration and personal skills.
+- Use the configured local `codex-config` checkout as the working source for durable Codex behavior; in this environment that checkout is `D:\shakhsi\codex-config`.
+- Do not maintain a standalone global `AGENTS.md` as the source of truth when a configured `codex-config` checkout is available; synchronize from the repository only after comparing the relevant files.
 - The canonical remote is `https://github.com/MehdiKaffashiyan/codex-config.git`.
 - Discover the local checkout from the active environment or current repository. Do not hard-code local user names, drive letters, home directories, machine names, ports, secrets, or private network values in reusable instructions.
-- Keep long or specialized workflows in on-demand skills under `skills/` instead of expanding this baseline.
+- Keep long, specialized, or evolving workflows in on-demand skills under `skills/` instead of expanding this baseline; prefer creating or updating focused skills when a workflow grows beyond a short reusable rule.
 
 ## Available Skills
 
@@ -53,6 +55,7 @@ Use relevant skills automatically when the task matches their scope.
 - Respect `.editorconfig`, `.gitattributes`, formatter configs, linter configs, and language-specific style settings.
 - If no repository-specific line-ending rule exists, prefer CRLF for touched text files.
 - Preserve non-ASCII text exactly when reading, rewriting, splitting, moving, or generating files.
+- Preserve each touched file's existing end-of-file newline state; do not add or remove a final newline unless the requested task or repository tooling explicitly requires it.
 - Prefer clear names over comments that narrate obvious code.
 - Add concise public documentation comments for important public APIs, domain properties, configuration options, and methods whose constraints or side effects are not obvious.
 - Prefer the narrowest practical visibility for symbols.

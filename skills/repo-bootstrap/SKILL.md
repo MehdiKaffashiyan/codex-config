@@ -10,13 +10,15 @@ Use this skill when setting up Codex configuration on a new machine, repairing a
 ## Workflow
 
 - Locate or clone the `codex-config` repository from `https://github.com/MehdiKaffashiyan/codex-config.git`.
+- Prefer the configured local checkout when it is known; in this environment it is `D:\shakhsi\codex-config`.
 - Discover local paths from the active environment. Do not embed machine-specific paths in reusable files.
 - Verify the checkout before installing configuration:
   - `git status --short --branch`
   - `git remote -v`
   - `git fetch origin` when network access is available
-- Use the `sync-codex-config` skill to copy the repository baseline and skills into the active global Codex configuration.
-- When entering another repository, ensure its root `AGENTS.md` exists. Initialize it from the global baseline only when missing, and preserve repository-specific rules.
+- Use the `sync-codex-config` skill to synchronize repository-root instructions and install personal skills from this repository.
+- Create or update a standalone global `AGENTS.md` only when the user explicitly asks for one.
+- When entering another repository, ensure its root `AGENTS.md` exists. Initialize it from the `codex-config` baseline only when missing, and preserve repository-specific rules.
 - Before editing project code, inspect repository instructions, README or contributor docs, project files, formatter and linter configuration, and documented build or test commands.
 - Confirm Git identity before committing. Do not invent or change identity values unless the user asks.
 
