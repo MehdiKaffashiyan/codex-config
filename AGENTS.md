@@ -12,14 +12,18 @@ Project-level or nested `AGENTS.md` files may add more specific rules. Follow th
 - The canonical remote is `https://github.com/MehdiKaffashiyan/codex-config.git`.
 - Discover the local checkout from the active environment or current repository. Do not hard-code local user names, drive letters, home directories, machine names, ports, secrets, or private network values in reusable instructions.
 - Keep long or specialized workflows in on-demand skills under `skills/` instead of expanding this baseline.
-- Use these skills when their trigger matches the task:
-  - `repo-bootstrap`: new-machine setup and repository bootstrap.
-  - `sync-codex-config`: conflict-safe sync between this repository, global Codex configuration, and installed personal skills.
-  - `legacy-migration`: legacy replacement, migration, and parity analysis.
-  - `verify-changes`: focused build, test, lint, and review verification.
-  - `smart-commit`: explicit smart commit workflow.
-  - `ef-migration`: Entity Framework migration workflow.
-  - `ddd-rich-entity`: rich domain entity modeling rules.
+
+## Available Skills
+
+Use relevant skills automatically when the task matches their scope.
+
+- `repo-bootstrap` - new machine or repository setup
+- `sync-codex-config` - synchronize Codex configuration
+- `legacy-migration` - legacy replacement or parity work
+- `verify-changes` - build, test, lint and final verification
+- `smart-commit` - prepare and create a safe commit
+- `ef-migration` - EF model/schema/migration changes
+- `ddd-rich-entity` - create or modify rich domain entities
 
 ## Language And Documentation
 
@@ -66,6 +70,7 @@ Project-level or nested `AGENTS.md` files may add more specific rules. Follow th
 - Do not use `git reset --hard`, forced checkouts, or equivalent destructive commands without explicit user approval.
 - Do not stage or commit changes unless explicitly requested. A `smart commit` request activates the `smart-commit` skill.
 - Never push unless the user explicitly requests it.
+- In the `codex-config` repository only, commit and push related configuration updates after verification when keeping the remote synchronized is the intended outcome. Do not repeatedly announce routine authorized commit or push steps; report the final result.
 
 ## Verification
 

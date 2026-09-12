@@ -104,3 +104,15 @@ After adding or changing a skill, verify that its frontmatter has a `name` and `
 - Stage only related files.
 - Use meaningful conventional commit messages.
 - Do not push unless explicitly requested.
+- For this repository only, push related configuration commits after verification when keeping the remote synchronized is the intended outcome.
+
+## Markdown Files
+
+- [Global Codex instructions](AGENTS.md)
+- [Repository bootstrap skill](skills/repo-bootstrap/SKILL.md)
+- [Codex configuration sync skill](skills/sync-codex-config/SKILL.md)
+- [Legacy migration skill](skills/legacy-migration/SKILL.md)
+- [Verification skill](skills/verify-changes/SKILL.md)
+- [Smart commit skill](skills/smart-commit/SKILL.md)
+- [Entity Framework migration skill](skills/ef-migration/SKILL.md)
+- [DDD rich entity skill](skills/ddd-rich-entity/SKILL.md)
