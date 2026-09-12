@@ -27,6 +27,7 @@ Use relevant skills automatically when the task matches their scope.
 - `smart-commit` - prepare and create a safe commit
 - `ef-migration` - EF model/schema/migration changes
 - `ddd-rich-entity` - create or modify rich domain entities
+- `codex-skill-workflow` - evaluate and apply external Codex skill recommendations
 
 ## Language And Documentation
 

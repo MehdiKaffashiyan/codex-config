@@ -37,7 +37,9 @@ codex-config/
     |   `-- SKILL.md
     |-- ef-migration/
     |   `-- SKILL.md
-    `-- ddd-rich-entity/
+    |-- ddd-rich-entity/
+    |   `-- SKILL.md
+    `-- codex-skill-workflow/
         `-- SKILL.md
 ```
 
@@ -118,3 +120,4 @@ After adding or changing a skill, verify that its frontmatter has a `name` and `
 - [Smart commit skill](skills/smart-commit/SKILL.md)
 - [Entity Framework migration skill](skills/ef-migration/SKILL.md)
 - [DDD rich entity skill](skills/ddd-rich-entity/SKILL.md)
+- [Codex skill workflow](skills/codex-skill-workflow/SKILL.md)
