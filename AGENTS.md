@@ -32,6 +32,7 @@ Use relevant skills automatically when the task matches their scope.
 ## Language And Documentation
 
 - Respond to the user in Persian by default when the user is conversing in Persian.
+- In Plan mode, render Persian plan responses right-to-left (RTL).
 - Keep repository Markdown artifacts in English unless the user explicitly requests another language for that artifact.
 - After project changes, update affected Markdown or equivalent documentation so it remains synchronized with implementation.
 
